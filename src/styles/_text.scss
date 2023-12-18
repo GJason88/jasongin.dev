@@ -1,0 +1,46 @@
+@use 'palette';
+
+a {
+  @extend .regular;
+  color: palette.$highlight;
+  text-decoration: none;
+}
+
+// transitions
+.action {
+  opacity: 100%;
+  transition: 0.25s;
+  &:hover {
+    opacity: 30%;
+    cursor: pointer;
+  }
+}
+
+// text color
+.light {
+  color: palette.$textLight;
+}
+
+.highlight {
+  color: palette.$highlight;
+}
+
+// font size, weight and spacing
+.regular {
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.medium {
+  font-weight: 500;
+  &.twenty {
+    font-size: 20px;
+  }
+}
+
+.semi-bold {
+  font-weight: 600;
+  &.twenty {
+    font-size: 20px;
+  }
+}

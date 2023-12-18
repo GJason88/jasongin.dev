@@ -1,0 +1,26 @@
+---
+import links from '../data/links.json';
+import GithubSVG from './icons/github.astro';
+import LinkedInSVG from './icons/linkedin.astro';
+---
+
+<div class='header'>
+  <div class='header' style='gap: 4px'>
+    <p class='semi-bold name light'>Jason Gin</p>
+    <p class='medium twenty light'>Software Engineer</p>
+  </div>
+  <p class='regular'>
+    Hey there! I’m a computer science new grad from
+    <a class='action' href={links.northeastern}>Northeastern University</a>
+     with 1 year of professional experience as a software engineer.
+  </p>
+  <div class='flexbox row' style='gap: 32px'>
+    <GithubSVG class='header-svg action' />
+    <LinkedInSVG class='header-svg action' />
+  </div>
+  <div class='header' style='gap: 12px'>
+    <a href='https://google.com'><button class='header-btn action'>RESUME</button></a>
+    <button class='header-btn action'>CONTACT ME</button>
+  </div>
+  <p class='medium twenty'>CURRENTLY WORKING ON: <a class='action'>Staple Recipes</a></p>
+</div>

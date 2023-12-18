@@ -1,0 +1,19 @@
+@use 'palette';
+@use 'text';
+@use 'layout';
+@use 'components/header';
+@font-face {
+  font-family: 'Roboto Flex';
+  src: url('/RobotoFlex.ttf');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: 'Roboto Flex', sans-serif;
+  background: palette.$bgDark;
+  color: palette.$textDark;
+}

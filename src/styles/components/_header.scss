@@ -1,0 +1,21 @@
+@use '../palette';
+
+.name {
+  font-size: 48px;
+  margin: 50px 0px 0px;
+}
+
+.header-svg {
+  height: 30px;
+  width: 30px;
+  fill: palette.$textDark;
+}
+
+.header-btn {
+  color: palette.$highlight;
+  background-color: transparent;
+  border: 2px solid palette.$highlight;
+  border-radius: 5px;
+  width: 130px;
+  padding: 6px 0px 6px;
+}
