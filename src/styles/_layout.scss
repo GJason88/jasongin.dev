@@ -1,3 +1,5 @@
+@use 'palette';
+
 .flexbox {
   display: flex;
   &.col {
@@ -8,6 +10,13 @@
   }
 }
 
+.content {
+  @extend .flexbox, .col;
+  align-items: center;
+  gap: 70px;
+}
+
+// header layout
 .header {
   @extend .flexbox, .col;
   text-align: center;
@@ -16,4 +25,29 @@
   max-width: 640px;
   width: 100%;
   margin: auto;
+}
+
+// ToC layout
+.toc {
+  @extend .flexbox, .col;
+  align-items: center;
+  gap: 10px;
+}
+
+.toc-item {
+  @extend .flexbox, .row;
+  justify-content: space-between;
+  width: 350px;
+  color: palette.$textDark;
+  border-radius: 5px;
+  padding: 6px 10px;
+  transition: 0.25s;
+  &:hover {
+    color: palette.$highlight;
+    width: 375px;
+  }
+}
+
+.ellipsis {
+  font-size: 48px;
 }

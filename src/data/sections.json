@@ -1,0 +1,6 @@
+[
+  { "name": "BACKGROUND", "href": "#background-section" },
+  { "name": "EXPERIENCE", "href": "#experience-section" },
+  { "name": "PROJECTS", "href": "#projects-section" },
+  { "name": "SKILLS", "href": "#skills-section" }
+]

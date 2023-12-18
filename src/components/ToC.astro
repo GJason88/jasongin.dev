@@ -1,0 +1,15 @@
+---
+import sections from '../data/sections.json';
+---
+
+<div class='toc'>
+  {
+    sections.map((section) => (
+      <a href={section.href} class='toc-item'>
+        <hr class='toc-line' />
+        <p>{section.name}</p>
+        <hr class='toc-line' />
+      </a>
+    ))
+  }
+</div>

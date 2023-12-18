@@ -2,6 +2,7 @@
 @use 'text';
 @use 'layout';
 @use 'components/header';
+@use 'components/toc';
 @font-face {
   font-family: 'Roboto Flex';
   src: url('/RobotoFlex.ttf');
