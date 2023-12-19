@@ -1,0 +1,72 @@
+@use '../palette';
+@use '../breakpoints';
+
+.experience-sidebar {
+  width: 23%;
+  display: flex;
+  flex-direction: column;
+  @include breakpoints.md-max {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.experience-sidebar-item {
+  display: flex;
+  flex-direction: column;
+  border-left: 2px solid palette.$bgLight;
+  padding: 15px 0px;
+  justify-content: center;
+  text-align: center;
+  cursor: default;
+  transition: .25s;
+  &.active {
+    color: palette.$textLight;
+    background-color: palette.$bgLight;
+  }
+  &:hover:not(.active) {
+    cursor: pointer;
+    background-color: palette.$bgLight;
+    opacity: 50%;
+  }
+  @include breakpoints.md-max {
+    width: 100%;
+    padding: 15px 15px;
+    border: 0px;
+    border-top: 2px solid palette.$bgLight;
+  }
+}
+
+.experience-content {
+  width: 73%;
+  display: none;
+  &.active {
+    display: flex;
+    flex-direction: column;
+  }
+  @include breakpoints.md-max {
+    width: 100%;
+  }
+}
+
+.experience-content-header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.experience-bullet {
+  fill: palette.$highlight;
+  min-width: 16px;
+  max-width: 16px;
+  min-height: 16px;
+  max-height: 16px;
+}
+
+.experience-description-line {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  align-items: center;
+}

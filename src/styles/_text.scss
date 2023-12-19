@@ -17,6 +17,10 @@ a {
 }
 
 // text color
+.dark {
+  color: palette.$textDark;
+}
+
 .light {
   color: palette.$textLight;
 }

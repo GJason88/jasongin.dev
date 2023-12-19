@@ -1,0 +1,62 @@
+---
+import Link from './Link.astro';
+import SectionTitle from './SectionTitle.astro';
+import { getCollection } from 'astro:content';
+import TechPill from './TechPill.astro';
+
+const experienceEntries = await getCollection('experience');
+---
+
+<div class='section-layout'>
+  <SectionTitle title='EXPERIENCE' />
+  <div class='experience-layout'>
+    <div class='experience-sidebar'>
+      {experienceEntries.map((entry) => <div class='experience-sidebar-item'>{entry.data.company}</div>)}
+    </div>
+    {
+      experienceEntries.map(async (entry) => {
+        const { Content } = await entry.render();
+        const techs = entry.data.tech ?? [];
+        return (
+          <div class='experience-content section-text'>
+            <div class='experience-content-header'>
+              <p class='medium twenty light'>
+                {entry.data.title}
+                <Link class='medium twenty' href={entry.data.href}>
+                  @ {entry.data.company}
+                </Link>
+              </p>
+              <p>
+                {entry.data.startDate.toLocaleString('default', { month: 'short' })}
+                {entry.data.startDate.getFullYear()}-{entry.data.endDate.toLocaleString('default', { month: 'short' })}
+                {entry.data.endDate.getFullYear()}
+              </p>
+            </div>
+            <div class='section-text'>
+              <Content />
+            </div>
+            <div class='tech-pill-layout'>
+              {techs.map((tech) => (
+                <TechPill href={tech.href}>{tech.name}</TechPill>
+              ))}
+            </div>
+          </div>
+        );
+      })
+    }
+  </div>
+</div>
+<script>
+  const sidebarItems = document.querySelectorAll('.experience-sidebar-item');
+  const contentItems = document.querySelectorAll('.experience-content');
+  sidebarItems[0].classList.toggle('active');
+  contentItems[0].classList.toggle('active');
+  sidebarItems.forEach((item, i) => {
+    item.addEventListener('click', () => {
+      sidebarItems.forEach((other) => other.classList.remove('active'));
+      contentItems.forEach((other) => other.classList.remove('active'));
+      item.classList.toggle('active');
+      contentItems[i].classList.toggle('active');
+    });
+  });
+</script>

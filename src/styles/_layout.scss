@@ -18,7 +18,7 @@
 }
 
 // header layout
-.header {
+.header-layout {
   @extend .flexbox, .col;
   text-align: center;
   align-items: center;
@@ -104,4 +104,18 @@
 .section-text {
   @extend .flexbox, .col;
   gap: 24px;
+}
+
+.experience-layout {
+  @extend .flexbox, .row;
+  justify-content: space-between;
+  @include breakpoints.md-max {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+.tech-pill-layout {
+  @extend .flexbox, .row;
+  gap: 8px;
 }
