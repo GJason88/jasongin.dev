@@ -1,12 +1,4 @@
----
-interface Props {
-  title: string;
-}
-
-const { title } = Astro.props;
----
-
 <div class='section-title-layout'>
-  <p class='section-title medium'>{title.toUpperCase()}</p>
+  <p class='section-title medium'><slot /></p>
   <hr class='section-title-line' />
 </div>

@@ -1,0 +1,7 @@
+{
+  "name": "Personal Portfolio",
+  "description": "This website! I built this portfolio website to showcase myself as a software engineer with an easy-on-the-eye design.",
+  "tech": ["Astro", "TypeScript", "Snowpack", "Firebase"],
+  "github": "https://github.com/GJason88/jasongin.dev",
+  "href": "https://jasongin.dev/"
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Animator",
+  "description": "An app for creating and viewing custom animations, complete with playback controls.",
+  "tech": ["Java"],
+  "github": "https://github.com/GJason88/animator"
+}

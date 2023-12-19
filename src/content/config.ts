@@ -8,17 +8,22 @@ const experienceCollection = defineCollection({
     startDate: z.date(),
     endDate: z.date(),
     href: z.string(),
-    tech: z
-      .array(
-        z.object({
-          name: z.string(),
-          href: z.string(),
-        })
-      )
-      .optional(),
+    tech: z.array(z.string()).optional(),
+  }),
+});
+
+const projectCollection = defineCollection({
+  type: 'data',
+  schema: z.object({
+    name: z.string(),
+    description: z.string(),
+    tech: z.array(z.string()),
+    github: z.string(),
+    href: z.string().optional(),
   }),
 });
 
 export const collections = {
   experience: experienceCollection,
+  projects: projectCollection,
 };

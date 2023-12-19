@@ -1,0 +1,21 @@
+{
+  "name": "Staple Recipes",
+  "description": "A full-stack web app for quick, easy, and nutritious recipes using common pantry staples.",
+  "tech": [
+    "React",
+    "Node",
+    "Express",
+    "TypeScript",
+    "JavaScript",
+    "Vite",
+    "Redux-Saga",
+    "React Query",
+    "PostgreSQL",
+    "Docker",
+    "NGINX",
+    "AWS",
+    "Firebase"
+  ],
+  "github": "https://github.com/GJason88/staplerecipes",
+  "href": "https://staplerecipes.com/"
+}

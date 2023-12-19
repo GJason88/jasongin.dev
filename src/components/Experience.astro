@@ -1,4 +1,5 @@
 ---
+import links from '../data/links.json';
 import Link from './Link.astro';
 import SectionTitle from './SectionTitle.astro';
 import { getCollection } from 'astro:content';
@@ -8,7 +9,7 @@ const experienceEntries = await getCollection('experience');
 ---
 
 <div id='experience-section' class='section-layout'>
-  <SectionTitle title='EXPERIENCE' />
+  <SectionTitle>EXPERIENCE</SectionTitle>
   <div class='experience-layout'>
     <div class='experience-sidebar'>
       {experienceEntries.map((entry) => <div class='experience-sidebar-item'>{entry.data.company}</div>)}
@@ -28,7 +29,8 @@ const experienceEntries = await getCollection('experience');
               </p>
               <p>
                 {entry.data.startDate.toLocaleString('default', { month: 'short' })}
-                {entry.data.startDate.getFullYear()} - {entry.data.endDate.toLocaleString('default', { month: 'short' })}
+                {entry.data.startDate.getFullYear()} -{' '}
+                {entry.data.endDate.toLocaleString('default', { month: 'short' })}
                 {entry.data.endDate.getFullYear()}
               </p>
             </div>
@@ -37,7 +39,7 @@ const experienceEntries = await getCollection('experience');
             </div>
             <div class='tech-pill-layout'>
               {techs.map((tech) => (
-                <TechPill href={tech.href}>{tech.name}</TechPill>
+                <TechPill href={links[tech.toLowerCase() as keyof typeof links]}>{tech}</TechPill>
               ))}
             </div>
           </div>

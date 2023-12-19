@@ -1,0 +1,6 @@
+{
+  "name": "N-Bullets",
+  "description": "A game based off of the popular 10-Bullets, but with a customizable number of bullets.",
+  "tech": ["Java"],
+  "github": "https://github.com/GJason88/nbullets-game"
+}

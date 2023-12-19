@@ -1,0 +1,6 @@
+{
+  "name": "OANDA RESTv20 Trading Bot",
+  "description": "Algorithmic trading bot that performs EMA Crossover Strategy on live markets made with Oanda's REST v20 API.",
+  "tech": ["Python"],
+  "github": "https://github.com/GJason88/oanda-ema-strategy"
+}

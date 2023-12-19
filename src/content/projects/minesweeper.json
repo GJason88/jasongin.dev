@@ -1,0 +1,6 @@
+{
+  "name": "Minesweeper",
+  "description": "A Java minesweeper game.",
+  "tech": ["Java"],
+  "github": "https://github.com/GJason88/minesweeper-game"
+}

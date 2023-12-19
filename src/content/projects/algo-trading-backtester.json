@@ -1,0 +1,6 @@
+{
+  "name": "Algo Trading Backtester",
+  "description": "Useful Python implementations of trading algorithms for backtesting against historical data.",
+  "tech": ["Python", "Backtrader"],
+  "github": "https://github.com/GJason88/backtrader-backtests"
+}
