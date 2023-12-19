@@ -1,4 +1,5 @@
 @use 'palette';
+@use 'breakpoints';
 
 .flexbox {
   display: flex;
@@ -22,9 +23,16 @@
   text-align: center;
   align-items: center;
   gap: 32px;
-  max-width: 640px;
   width: 100%;
-  margin: auto;
+  @include breakpoints.xs-min {
+    max-width: breakpoints.$xs-header-width;
+  }
+  @include breakpoints.sm-min {
+    max-width: breakpoints.$sm-header-width;
+  }
+  @include breakpoints.md-min {
+    max-width: breakpoints.$md-header-width;
+  }
 }
 
 // ToC layout
@@ -37,17 +45,63 @@
 .toc-item {
   @extend .flexbox, .row;
   justify-content: space-between;
-  width: 350px;
   color: palette.$textDark;
   border-radius: 5px;
   padding: 6px 10px;
   transition: 0.25s;
   &:hover {
     color: palette.$highlight;
-    width: 375px;
+  }
+  @include breakpoints.xs-min {
+    width: breakpoints.$xs-toc-width;
+    &:hover {
+      width: breakpoints.$xs-toc-width + 25px;
+    }
+  }
+  @include breakpoints.sm-min {
+    width: breakpoints.$sm-toc-width;
+    &:hover {
+      width: breakpoints.$sm-toc-width + 25px;
+    }
   }
 }
 
 .ellipsis {
   font-size: 48px;
+}
+
+// Sections layout
+
+.section-layout {
+  @extend .flexbox, .col;
+  width: 100%;
+  gap: 32px;
+  @include breakpoints.xs-min {
+    max-width: breakpoints.$xs-section-width;
+  }
+  @include breakpoints.sm-min {
+    max-width: breakpoints.$sm-section-width;
+  }
+  @include breakpoints.md-min {
+    max-width: breakpoints.$md-section-width;
+  }
+  @include breakpoints.lg-min {
+    max-width: breakpoints.$lg-section-width;
+  }
+  @include breakpoints.xl-min {
+    max-width: breakpoints.$xl-section-width;
+  }
+}
+
+.section-title-layout {
+  @extend .flexbox, .row;
+  gap: 24px;
+  @include breakpoints.md-max {
+    justify-content: center;
+  }
+}
+
+.section-text {
+  @extend .flexbox, .col;
+  gap: 24px;
 }

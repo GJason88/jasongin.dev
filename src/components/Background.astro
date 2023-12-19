@@ -1,0 +1,27 @@
+---
+import SectionTitle from './SectionTitle.astro';
+import links from '../data/links.json';
+import Link from './Link.astro';
+---
+
+<div class='section-layout'>
+  <SectionTitle title='BACKGROUND' />
+  <div class='section-text'>
+    <p class='regular'>
+      I recently graduated with a B.S. degree in computer science from
+      <Link href={links.northeastern}>Northeastern University</Link> after completing twoawesome six month co-ops as a
+      software engineer at <Link href={links.intuit}>Intuit</Link> and
+      <Link href={links.colgate}>Colgate-Palmolive</Link>.
+    </p>
+    <p class='regular'>
+      What I love about being a software engineer is the freedom to solve problems pragmatically and bring great ideas
+      to fruition. I always strive to design and build applications that are efficient and scalable with an enjoyable
+      user experience if applicable. Currently, my primary focus is to be able to continue building and learning as a
+      software engineer in an environment that brings out the best in me.
+    </p>
+    <p class='regular'>
+      When I’m not in front of a computer screen you could probably catch me either cooking some delicious food or
+      training at the local gym.
+    </p>
+  </div>
+</div>

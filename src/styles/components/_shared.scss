@@ -1,0 +1,18 @@
+@use '../palette';
+@use '../breakpoints';
+
+.section-title {
+  font-size: 32px;
+  color: palette.$textLight;
+}
+
+.section-title-line {
+  border-color: palette.$textDark;
+  opacity: 20%;
+  height: 0px;
+  flex-grow: 1;
+  align-self: center;
+  @include breakpoints.md-max {
+    display: none;
+  }
+}

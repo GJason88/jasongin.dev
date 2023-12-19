@@ -1,0 +1,54 @@
+$xs-breakpoint: 0px;
+$sm-breakpoint: 576px;
+$md-breakpoint: 768px;
+$lg-breakpoint: 992px;
+$xl-breakpoint: 1200px;
+
+$xs-header-width: 290px;
+$sm-header-width: 440px;
+$md-header-width: 640px;
+
+$xs-toc-width: 300px;
+$sm-toc-width: 350px;
+
+$xs-section-width: 340px;
+$sm-section-width: 500px;
+$md-section-width: 700px;
+$lg-section-width: 830px;
+$xl-section-width: 960px;
+
+@mixin xs-min {
+  @media screen and (min-width: #{$xs-breakpoint}) {
+      @content;
+  }
+}
+
+@mixin sm-min {
+  @media screen and (min-width: #{$sm-breakpoint}) {
+      @content;
+  }
+}
+
+@mixin md-min {
+  @media screen and (min-width: #{$md-breakpoint}) {
+      @content;
+  }
+}
+
+@mixin lg-min {
+  @media screen and (min-width: #{$lg-breakpoint}) {
+      @content;
+  }
+}
+
+@mixin xl-min {
+  @media screen and (min-width: #{$xl-breakpoint}) {
+      @content;
+  }
+}
+
+@mixin md-max {
+  @media screen and (max-width: #{$md-breakpoint}) {
+      @content;
+  }
+}
