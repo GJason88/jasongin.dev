@@ -28,7 +28,7 @@ const experienceEntries = await getCollection('experience');
               </p>
               <p>
                 {entry.data.startDate.toLocaleString('default', { month: 'short' })}
-                {entry.data.startDate.getFullYear()}-{entry.data.endDate.toLocaleString('default', { month: 'short' })}
+                {entry.data.startDate.getFullYear()} - {entry.data.endDate.toLocaleString('default', { month: 'short' })}
                 {entry.data.endDate.getFullYear()}
               </p>
             </div>
