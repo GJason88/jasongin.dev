@@ -1,6 +1,6 @@
 # Personal Portfolio
 
-[View Live](jasongin.dev)
+<a href="https://jasongin.dev" target="_blank" rel='noopener noreferrer'>View Live</a>
 
 ## Built Using
 
