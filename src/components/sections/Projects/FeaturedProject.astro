@@ -25,9 +25,13 @@ const techs = project.data.tech;
       <Link href={project.data.github}>
         <Github class='projects-github-svg' />
       </Link>
-      <Link href={project.data.href ?? ''}>
-        <ExternalLink class='action projects-link-svg' />
-      </Link>
+      {
+        project.data.href && (
+          <Link href={project.data.href}>
+            <ExternalLink class='action projects-link-svg' />
+          </Link>
+        )
+      }
     </div>
   </div>
   <div class='featured-project-img-container'>

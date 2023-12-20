@@ -1,0 +1,31 @@
+---
+import links from '../../../data/links.json';
+import type { CollectionEntry } from 'astro:content';
+import Link from '../../shared/Link.astro';
+import Github from '../../icons/github.astro';
+import ExternalLink from '../../icons/external-link.astro';
+import TechPill from '../../shared/TechPill.astro';
+interface Props {
+  project: CollectionEntry<'projects'>;
+}
+const { project } = Astro.props;
+const techs = project.data.tech;
+---
+
+<div class='project-card'>
+  <p class='medium twenty light'>{project.data.name}</p>
+  <p>{project.data.description}</p>
+  <div style='margin-top: auto;'>
+    <Link href={project.data.github}><Github class='projects-github-svg' /></Link>
+    {
+      project.data.href && (
+        <Link href={project.data.href}>
+          <ExternalLink class='projects-link-svg' />
+        </Link>
+      )
+    }
+  </div>
+  <div class='tech-pill-layout'>
+    {techs.map((tech) => <TechPill href={links[tech.toLowerCase() as keyof typeof links]}>{tech}</TechPill>)}
+  </div>
+</div>

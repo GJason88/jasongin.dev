@@ -47,8 +47,20 @@ $xl-section-width: 960px;
   }
 }
 
+@mixin sm-max {
+  @media screen and (max-width: #{$sm-breakpoint}) {
+      @content;
+  }
+}
+
 @mixin md-max {
   @media screen and (max-width: #{$md-breakpoint}) {
+      @content;
+  }
+}
+
+@mixin lg-max {
+  @media screen and (max-width: #{$lg-breakpoint}) {
       @content;
   }
 }

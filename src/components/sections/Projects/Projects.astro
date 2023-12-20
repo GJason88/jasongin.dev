@@ -1,0 +1,26 @@
+---
+import { getCollection, getEntry } from 'astro:content';
+import SectionTitle from '../../shared/SectionTitle.astro';
+import FeaturedProject from './FeaturedProject.astro';
+import ProjectCard from './ProjectCard.astro';
+
+const featured = ['Staple Recipes', 'Personal Portfolio'];
+const allProjects = await getCollection('projects');
+const featuredProjects = allProjects.filter((p) => featured.includes(p.data.name));
+const otherProjects = allProjects.filter((p) => !featured.includes(p.data.name));
+---
+
+<div id='projects-section' class='section-layout'>
+  <SectionTitle>FEATURED PROJECTS</SectionTitle>
+  <div class='featured-projects-content'>
+    <FeaturedProject id='staple-recipes' project={featuredProjects[1]} />
+    <FeaturedProject project={featuredProjects[0]} reverse />
+  </div>
+</div>
+<span class='ellipsis'>&#8942;</span>
+<div class='section-layout'>
+  <SectionTitle>OTHER PROJECTS</SectionTitle>
+  <div class='other-projects-content'>
+    {otherProjects.map((project) => <ProjectCard project={project} />)}
+  </div>
+</div>
