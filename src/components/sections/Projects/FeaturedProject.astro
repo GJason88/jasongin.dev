@@ -1,10 +1,10 @@
 ---
-import links from '../data/links.json';
+import links from '../../../data/links.json';
 import type { CollectionEntry } from 'astro:content';
-import TechPill from './TechPill.astro';
-import Github from './icons/github.astro';
-import ExternalLink from './icons/external-link.astro';
-import Link from './Link.astro';
+import TechPill from '../../shared/TechPill.astro';
+import Github from '../../icons/github.astro';
+import ExternalLink from '../../icons/external-link.astro';
+import Link from '../../shared/Link.astro';
 interface Props {
   project: CollectionEntry<'projects'>;
   id?: string;

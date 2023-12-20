@@ -1,9 +1,9 @@
 ---
-import links from '../data/links.json';
-import Link from './Link.astro';
-import SectionTitle from './SectionTitle.astro';
+import links from '../../../data/links.json';
+import Link from '../../shared/Link.astro';
+import SectionTitle from '../../shared/SectionTitle.astro';
 import { getCollection } from 'astro:content';
-import TechPill from './TechPill.astro';
+import TechPill from '../../shared/TechPill.astro';
 
 const experienceEntries = await getCollection('experience');
 ---
