@@ -1,5 +1,6 @@
 ---
 import links from '../data/links.json';
+import Link from './Link.astro';
 import GithubSVG from './icons/github.astro';
 import LinkedInSVG from './icons/linkedin.astro';
 ---
@@ -11,28 +12,28 @@ import LinkedInSVG from './icons/linkedin.astro';
   </div>
   <p class='regular'>
     Hey there! I’m a computer science new grad from
-    <a class='action' href={links.northeastern} target='_blank' rel='noopener noreferrer'>Northeastern University</a>
+    <Link class='action' href={links.northeastern}>Northeastern University</Link>
      with 1 year of professional experience as a software engineer.
   </p>
   <div class='flexbox row' style='gap: 32px'>
-    <a href={links.github} target='_blank' rel='noopener noreferrer'>
+    <Link href={links.github}>
       <GithubSVG class='header-svg action' />
-    </a>
+    </Link>
 
-    <a href={links.linkedin} target='_blank' rel='noopener noreferrer'>
+    <Link href={links.linkedin}>
       <LinkedInSVG class='header-svg action' />
-    </a>
+    </Link>
   </div>
   <div class='header-layout' style='gap: 12px'>
-    <a href='/resume.pdf' target='_blank' rel='noopener noreferrer'>
+    <Link href='/resume.pdf'>
       <button class='header-btn action'>RESUME</button>
-    </a>
-    <a href='mailto:jasongin88@gmail.com'>
+    </Link>
+    <Link href='mailto:jasongin88@gmail.com'>
       <button class='header-btn action'>CONTACT ME</button>
-    </a>
+    </Link>
   </div>
   <p class='medium twenty'>
     CURRENTLY WORKING ON:
-    <a class='action regular twenty' href='https://google.com' target='_blank' rel='noopener noreferrer'>Staple Recipes</a>
+    <a class='action regular twenty' href='#staple-recipes'>Staple Recipes</a>
   </p>
 </div>

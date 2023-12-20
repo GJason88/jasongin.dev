@@ -1,7 +1,16 @@
 ---
+import { getEntry } from 'astro:content';
 import SectionTitle from './SectionTitle.astro';
+import FeaturedProject from './FeaturedProject.astro';
+
+const firstFeatured = await getEntry('projects', 'staple-recipes');
+const secondFeatured = await getEntry('projects', 'personal-portfolio');
 ---
 
 <div id='projects-section' class='section-layout'>
   <SectionTitle>FEATURED PROJECTS</SectionTitle>
+  <div class='featured-projects-content'>
+    <FeaturedProject id='staple-recipes' project={firstFeatured} />
+    <FeaturedProject project={secondFeatured} reverse />
+  </div>
 </div>

@@ -117,5 +117,33 @@
 
 .tech-pill-layout {
   @extend .flexbox, .row;
+  flex-wrap: wrap;
   gap: 8px;
+}
+
+.featured-project-layout {
+  @extend .section-layout;
+  flex-direction: row;
+  gap: 0px;
+  @include breakpoints.md-max {
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+  }
+  &.reverse {
+    :nth-child(1) {
+      order: 2;
+    }
+    :nth-child(2) {
+      order: 1;
+    }
+    @include breakpoints.md-max {
+      :nth-child(1) {
+        order: 1;
+      }
+      :nth-child(2) {
+        order: 2;
+      }
+    }
+  }
 }

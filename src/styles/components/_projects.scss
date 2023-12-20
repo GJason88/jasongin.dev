@@ -1,0 +1,96 @@
+@use '../palette';
+@use '../breakpoints';
+
+.featured-projects-content {
+  display: flex;
+  flex-direction: column;
+  gap: 96px;
+}
+
+.featured-project-info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 50%;
+  &.right {
+    text-align: right;
+    :nth-child(1) {
+      order: 1;
+    }
+    :nth-child(2) {
+      order: 2;
+    }
+    :nth-child(3) {
+      order: 3;
+    }
+    :nth-child(4) {
+      order: 4;
+    }
+    @include breakpoints.md-max {
+      text-align: left;
+    }
+  }
+}
+
+.featured-project-img-container {
+  display: flex;
+  width: 50%;
+}
+
+.featured-project-img {
+  object-fit: contain;
+}
+
+.featured-project-tech {
+  &.right {
+    padding-left: 8px;
+    @include breakpoints.md-max {
+      padding-left: 0px;
+    }
+  }
+}
+
+.featured-project-description {
+  background-color: palette.$bgLight;
+  padding: 20px;
+  border-radius: 3px;
+  z-index: 999;
+  opacity: 90%;
+  &.left {
+    box-shadow: 2px 2px 2px rgba(5, 255, 109, .5);
+    margin-right: -30px;
+    @include breakpoints.md-max {
+      margin-right: 0px;
+    }
+  }
+  &.right {
+    box-shadow: -2px 2px 2px rgba(5, 255, 109, .5);
+    margin-left: -30px;
+    @include breakpoints.md-max {
+      margin-left: 0px;
+    }
+  }
+}
+
+.projects-svgs {
+  margin-top: auto
+}
+
+.projects-github-svg {
+  fill: none;
+  stroke: palette.$textDark;
+  stroke-width: 0.5px;
+  stroke-linejoin: round;
+  width: 25px;
+  height: 25px;
+}
+
+.projects-link-svg {
+  fill: none;
+  stroke: palette.$textDark;
+  stroke-width: 0.5px;
+  stroke-linejoin: round;
+  width: 35px;
+  height: 35px;
+  margin-bottom: -6px;
+}

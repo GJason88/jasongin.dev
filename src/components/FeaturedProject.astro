@@ -1,0 +1,36 @@
+---
+import links from '../data/links.json';
+import type { CollectionEntry } from 'astro:content';
+import TechPill from './TechPill.astro';
+import Github from './icons/github.astro';
+import ExternalLink from './icons/external-link.astro';
+import Link from './Link.astro';
+interface Props {
+  project: CollectionEntry<'projects'>;
+  id?: string;
+  reverse?: boolean;
+}
+const { project, id, reverse } = Astro.props;
+const techs = project.data.tech;
+---
+
+<div id={id ?? ''} class={'featured-project-layout' + (reverse ? ' reverse' : '')}>
+  <div class={'featured-project-info' + (reverse ? ' right' : '')}>
+    <p class='medium twenty light'>{project.data.name}</p>
+    <div class={'featured-project-description' + (reverse ? ' right' : ' left')}>{project.data.description}</div>
+    <div class={'tech-pill-layout' + (reverse ? ' featured-project-tech right' : '')}>
+      {techs.map((tech) => <TechPill href={links[tech.toLowerCase() as keyof typeof links]}>{tech}</TechPill>)}
+    </div>
+    <div class='projects-svgs'>
+      <Link href={project.data.github}>
+        <Github class='projects-github-svg' />
+      </Link>
+      <Link href={project.data.href ?? ''}>
+        <ExternalLink class='action projects-link-svg' />
+      </Link>
+    </div>
+  </div>
+  <div class='featured-project-img-container'>
+    <img src='/black.jpg' width='100%' height='100%' class='featured-project-img' />
+  </div>
+</div>

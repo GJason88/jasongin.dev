@@ -21,6 +21,10 @@
   background-color: rgba(5, 255, 109, .15);
   border-radius: 20px;
   font-size: 12px;
-  padding: 4px 12px;
+  padding: 0px 12px;
   font-weight: 500;
+  @include breakpoints.md-max {
+    font-size: 8px;
+    padding: 0px 8px;
+  }
 }
