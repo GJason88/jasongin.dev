@@ -38,6 +38,13 @@
 .featured-project-img-container {
   display: flex;
   width: 50%;
+  height: 320px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  transition: 0.25s;
+  &:hover {
+    box-shadow: 2px 2px 5px rgba(5, 255, 109, 0.5);
+    transform: scale(1.2);
+  }
   @include breakpoints.md-max {
     width: 100%;
     text-align: left;

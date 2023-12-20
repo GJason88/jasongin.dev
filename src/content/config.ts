@@ -20,6 +20,7 @@ const projectCollection = defineCollection({
     tech: z.array(z.string()),
     github: z.string(),
     href: z.string().optional(),
+    image: z.string().optional(),
   }),
 });
 

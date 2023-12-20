@@ -119,12 +119,15 @@
   @extend .flexbox, .row;
   flex-wrap: wrap;
   gap: 8px;
+  z-index: 999;
 }
 
 .featured-project-layout {
   @extend .section-layout;
   flex-direction: row;
   gap: 0px;
+  min-height: 320px;
+  height: 100%;
   @include breakpoints.md-max {
     flex-direction: column;
     gap: 16px;
