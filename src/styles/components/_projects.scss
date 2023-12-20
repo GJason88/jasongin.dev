@@ -79,14 +79,14 @@
   }
 }
 
-.projects-svgs {
+.project-svgs {
   margin-top: auto;
 }
 
 .projects-github-svg {
   fill: none;
-  stroke: palette.$textDark;
-  stroke-width: 0.5px;
+  stroke: grey;
+  stroke-width: 1px;
   stroke-linejoin: round;
   width: 25px;
   height: 25px;
@@ -94,12 +94,12 @@
 
 .projects-link-svg {
   fill: none;
-  stroke: palette.$textDark;
-  stroke-width: 0.5px;
+  stroke: grey;
+  stroke-width: 1px;
   stroke-linejoin: round;
   width: 35px;
   height: 35px;
-  margin-bottom: -6px;
+  margin: 0px 0px -6px 12px;
 }
 
 .other-projects-content {

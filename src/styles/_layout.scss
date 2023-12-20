@@ -147,3 +147,22 @@
     }
   }
 }
+
+.skills-layout {
+  @extend .flexbox, .row;
+  justify-content: space-between;
+}
+
+.skills-list-layout {
+  @extend .flexbox, .col;
+  gap: 12px;
+  &.content {
+    align-items: start;
+    margin: 0px auto;
+  }
+}
+
+.backtotop-layout {
+  @extend .flexbox, .col;
+  align-items: center;
+}

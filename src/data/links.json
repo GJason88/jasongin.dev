@@ -27,5 +27,9 @@
   "firebase": "https://firebase.google.com/",
   "astro": "https://astro.build/",
   "vite": "https://vitejs.dev/",
-  "backtrader": "https://www.backtrader.com/"
+  "backtrader": "https://www.backtrader.com/",
+  "junit": "https://junit.org/",
+  "webpack": "https://webpack.js.org/",
+  "snowpack": "https://www.snowpack.dev/",
+  "figma": "https://www.figma.com/"
 }

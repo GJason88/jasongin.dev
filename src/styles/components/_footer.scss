@@ -1,0 +1,7 @@
+@use '../palette';
+
+.back-to-top-svg {
+  fill: palette.$textDark;
+  width: 30px;
+  height: 30px;
+}

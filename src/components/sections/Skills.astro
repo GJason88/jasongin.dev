@@ -1,0 +1,45 @@
+---
+import links from '../../data/links.json';
+import Link from '../shared/Link.astro';
+import SectionTitle from '../shared/SectionTitle.astro';
+const languages = ['Python', 'Java', 'JavaScript', 'TypeScript', 'SQL', 'HTML', 'CSS', 'SCSS'];
+const libraries = ['React', 'Express', 'Astro', 'Redux', 'Redux-Saga', 'Cypress', 'Jest', 'JUnit'];
+const tools = [
+  'Git',
+  'GitHub',
+  'AWS',
+  'GCP',
+  'Firebase',
+  'Docker',
+  'NGINX',
+  'Vite',
+  'Webpack',
+  'Snowpack',
+  'JIRA',
+  'Figma',
+];
+---
+
+<div id='skills-section' class='section-layout'>
+  <SectionTitle>MOST PROFICIENT SKILLS</SectionTitle>
+  <div class='skills-layout'>
+    <div class='skills-list-layout'>
+      <p class='medium twenty'>Programming Languages</p>
+      <div class='skills-list-layout content highlight'>
+        {languages.map((lang) => <Link href={links[lang.toLowerCase() as keyof typeof links]}>{lang}</Link>)}
+      </div>
+    </div>
+    <div class='skills-list-layout'>
+      <p class='medium twenty'>Libraries & Frameworks</p>
+      <div class='skills-list-layout content highlight'>
+        {libraries.map((lib) => <Link href={links[lib.toLowerCase() as keyof typeof links]}>{lib}</Link>)}
+      </div>
+    </div>
+    <div class='skills-list-layout'>
+      <p class='medium twenty'>Tools & Platforms</p>
+      <div class='skills-list-layout content highlight'>
+        {tools.map((tool) => <Link href={links[tool.toLowerCase() as keyof typeof links]}>{tool}</Link>)}
+      </div>
+    </div>
+  </div>
+</div>

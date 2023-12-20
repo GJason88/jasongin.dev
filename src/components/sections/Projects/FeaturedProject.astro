@@ -21,7 +21,7 @@ const techs = project.data.tech;
     <div class={'tech-pill-layout' + (reverse ? ' featured-project-tech right' : '')}>
       {techs.map((tech) => <TechPill href={links[tech.toLowerCase() as keyof typeof links]}>{tech}</TechPill>)}
     </div>
-    <div class='projects-svgs'>
+    <div class='project-svgs'>
       <Link href={project.data.github}>
         <Github class='projects-github-svg' />
       </Link>

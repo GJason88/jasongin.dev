@@ -6,6 +6,8 @@
 @use 'components/toc';
 @use 'components/experience';
 @use 'components/projects';
+@use 'components/skills';
+@use 'components/footer';
 @font-face {
   font-family: 'Roboto Flex';
   src: url('/RobotoFlex.ttf');
@@ -20,4 +22,6 @@ html {
   font-family: 'Roboto Flex', sans-serif;
   background: palette.$bgDark;
   color: palette.$textDark;
+  margin-bottom: 10px;
+  scroll-behavior: smooth;
 }
