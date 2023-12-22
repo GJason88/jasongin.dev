@@ -159,6 +159,8 @@
 .skills-list-layout {
   @extend .flexbox, .col;
   gap: 12px;
+  text-align: center;
+  align-items: center;
   &.content {
     align-items: start;
     margin: 0px auto;

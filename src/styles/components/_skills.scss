@@ -1,3 +1,25 @@
+@use '../breakpoints';
+@use '../palette';
+
+.skills-list-header {
+  font-size: 20px;
+  font-weight: 500;
+
+  @include breakpoints.md-max {
+    font-size: 16px;
+  }
+}
+
 .skills-list-content {
-  margin-left: 16px;
+  font-size: 16px;
+
+  @include breakpoints.md-max {
+    font-size: 12px;
+  }
+}
+
+.skills-divider {
+  width: 0px;
+  opacity: 20%;
+  margin: 0px 8px;
 }

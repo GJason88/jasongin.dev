@@ -24,21 +24,41 @@ const tools = [
   <SectionTitle>MOST PROFICIENT SKILLS</SectionTitle>
   <div class='skills-layout'>
     <div class='skills-list-layout'>
-      <p class='medium twenty'>Programming Languages</p>
+      <p class='skills-list-header'>Programming Languages</p>
       <div class='skills-list-layout content highlight'>
-        {languages.map((lang) => <Link href={links[lang.toLowerCase() as keyof typeof links]}>{lang}</Link>)}
+        {
+          languages.map((lang) => (
+            <Link class='skills-list-content' href={links[lang.toLowerCase() as keyof typeof links]}>
+              {lang}
+            </Link>
+          ))
+        }
       </div>
     </div>
+    <hr class='skills-divider' />
     <div class='skills-list-layout'>
-      <p class='medium twenty'>Libraries & Frameworks</p>
+      <p class='skills-list-header'>Libraries & Frameworks</p>
       <div class='skills-list-layout content highlight'>
-        {libraries.map((lib) => <Link href={links[lib.toLowerCase() as keyof typeof links]}>{lib}</Link>)}
+        {
+          libraries.map((lib) => (
+            <Link class='skills-list-content' href={links[lib.toLowerCase() as keyof typeof links]}>
+              {lib}
+            </Link>
+          ))
+        }
       </div>
     </div>
+    <hr class='skills-divider' />
     <div class='skills-list-layout'>
-      <p class='medium twenty'>Tools & Platforms</p>
+      <p class='skills-list-header'>Tools & Platforms</p>
       <div class='skills-list-layout content highlight'>
-        {tools.map((tool) => <Link href={links[tool.toLowerCase() as keyof typeof links]}>{tool}</Link>)}
+        {
+          tools.map((tool) => (
+            <Link class='skills-list-content' href={links[tool.toLowerCase() as keyof typeof links]}>
+              {tool}
+            </Link>
+          ))
+        }
       </div>
     </div>
   </div>
