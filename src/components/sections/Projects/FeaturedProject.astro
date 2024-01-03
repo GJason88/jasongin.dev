@@ -12,7 +12,6 @@ interface Props {
 }
 const { project, id, reverse } = Astro.props;
 const techs = project.data.tech;
-console.log(techs);
 ---
 
 <div id={id ?? ''} class={'featured-project-layout' + (reverse ? ' reverse' : '')}>
