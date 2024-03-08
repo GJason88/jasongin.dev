@@ -1,0 +1,8 @@
+{
+    "name": "Go Chatroom",
+    "description": "A CLI multi-room chatroom app written in Go.",
+    "tech": [
+      "Go"
+    ],
+    "github": "https://github.com/GJason88/go-chatroom"
+  }

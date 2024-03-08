@@ -37,5 +37,6 @@
   "html": "https://developer.mozilla.org/en-US/docs/Web/HTML",
   "css": "https://developer.mozilla.org/en-US/docs/Web/CSS",
   "scss": "https://sass-lang.com/",
-  "react query": "https://tanstack.com/query/v3/"
+  "react query": "https://tanstack.com/query/v3/",
+  "go": "https://go.dev/"
 }
