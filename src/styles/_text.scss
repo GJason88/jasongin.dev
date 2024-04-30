@@ -10,6 +10,7 @@ a {
 .action {
   opacity: 100%;
   transition: 0.25s;
+  flex-shrink: 1;
   &:hover {
     opacity: 40%;
     cursor: pointer;

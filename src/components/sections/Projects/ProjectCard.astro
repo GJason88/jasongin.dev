@@ -16,7 +16,13 @@ const techs = project.data.tech;
   <p class='medium twenty light'>{project.data.name}</p>
   <p>{project.data.description}</p>
   <div style='margin-top: auto;'>
-    <Link href={project.data.github}><Github class='projects-github-svg' /></Link>
+    {
+      project.data.github && (
+        <Link href={project.data.github}>
+          <Github class='projects-github-svg' />
+        </Link>
+      )
+    }
     {
       project.data.href && (
         <Link href={project.data.href}>

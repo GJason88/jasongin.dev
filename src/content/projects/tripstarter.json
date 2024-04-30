@@ -1,0 +1,14 @@
+{
+    "name": "TripStarter",
+    "description": "A full-stack web app for kickstarting the planning of trips.",
+    "tech": [
+      "React",
+      "Go",
+      "TypeScript",
+      "JavaScript",
+      "Node",
+      "Firebase",
+      "GCP"
+    ]
+  }
+  
