@@ -22,9 +22,13 @@ const techs = project.data.tech;
       {techs.map((tech) => <TechPill href={links[tech.toLowerCase() as keyof typeof links]}>{tech}</TechPill>)}
     </div>
     <div class='project-svgs'>
-      <Link href={project.data.github}>
-        <Github class='projects-github-svg' />
-      </Link>
+      {
+        project.data.github && (
+          <Link href={project.data.github}>
+            <Github class='projects-github-svg' />
+          </Link>
+        )
+      }
       {
         project.data.href && (
           <Link href={project.data.href}>
