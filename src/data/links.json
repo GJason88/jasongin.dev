@@ -38,5 +38,6 @@
   "css": "https://developer.mozilla.org/en-US/docs/Web/CSS",
   "scss": "https://sass-lang.com/",
   "react query": "https://tanstack.com/query/v3/",
-  "go": "https://go.dev/"
+  "go": "https://go.dev/",
+  "perl": "https://www.perl.org/"
 }
